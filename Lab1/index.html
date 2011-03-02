@@ -1,0 +1,411 @@
+<html><head>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2"><title>GUI, Laboratorium 1</title>
+  
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+<body bgcolor="#f0f0f0">
+  <h1>
+      Po-feryjny zawrót głowy...</h1>
+  <p align="right"><img src="./images/line.gif"> 
+
+
+  </p><p>
+    </p><ul>
+
+
+      </li><li> &nbsp; <b> Zadanie 1</b> <br><br>
+Zdefiniuj klasę <i>WindyString</i>,
+ktora umożliwia wyświetlenie tekstu w następujący sposób. W co drugim
+wyrazie samogloski wiatr podwiał o wiersz do góry, zaś w pozostałych
+wyrazach wiatr wiał w stronę przeciwną i samogłoski zostały zwiane
+wiersz niżej.
+Wykorzystaj poniższy przedstawiony poniżej kod testujący. <br><br>
+
+
+
+ <table align="center" bgcolor="#ffd700" border="1" cellpadding="2" cellspacing="2" width="80%">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffaa00" valign="top"><b>kod programu</b></td>
+    </tr>
+    <tr>
+    <td valign="top">
+	<pre>
+ System.out.println(WindyString.blow("Abrakadabra!          The    second  chance to pass has already BEGUN! "));
+</pre>
+    </td>
+</tr></tbody>
+</table>
+
+<br>
+ <table align="center" bgcolor="#ffd700" border="1" cellpadding="2" cellspacing="2" width="80%">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffaa00" valign="top"><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="top">
+	<pre>
+                    e              a  e         a           a  ea y                         
+   br k d br !    Th    s c nd   ch nc    t    p ss   h s    lr  d    B G N!
+  A  a a a  a            e o               o           a               E U</pre>
+    </td>
+</tr></tbody>
+</table>
+          <hr color="#dd0000" size="2" width="100%"><br><br>
+
+
+
+
+
+
+      </li><li> &nbsp; <b> Zadanie 2</b> <br><br>
+          Zdefiniuj klasę <i>Tree</i>, której obiekt będzie
+          imitował drzewo o różnej liczbie i długości gałęzi, oraz o rodzaju liści. Poniżej przedstawiono
+          kod tekstujący.<br><br>
+ <table align="center" bgcolor="#ffd700" border="1" cellpadding="2" cellspacing="2" width="50%">
+  <tbody>
+    <tr>
+      <td bgcolor="#ff8c00" valign="top"><b>kod programu</b></td>
+      <td bgcolor="#ff8c00" valign="top"><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="top">
+	<pre>
+   Tree d1=new Tree("2345","725");
+
+   d1.setLeaves("$#$#");
+
+   System.out.println(d1);
+
+
+
+
+
+
+
+   Tree d2=new Tree("638");
+   Tree d3=new Tree("24156","023","@%@");
+
+   System.out.println(d2);
+
+
+
+
+
+
+
+   System.out.println(d3);
+  
+</pre>
+      </td>
+    <td valign="top">
+	<pre>
+
+	
+
+
+      |
+    $$|$$$$$$$
+   ###|##
+  $$$$|$$$$$
+ #####|
+      |
+      |
+
+
+
+
+         |
+   ******|******
+      ***|***
+ ********|********
+         |
+         |
+
+
+       | 
+     @@|
+   %%%%|%%
+      @|@@@
+  @@@@@|
+ @@@@@@|
+       |
+       |
+ </pre>
+      </td></tr></tbody>
+</table>
+          <hr color="#dd0000" size="5" width="100%"><br><br>
+
+
+
+
+
+
+
+
+      <li> &nbsp; <B> Zadanie 3 </B> <BR><br>
+	Napisz klasę <i>Sentence</i> tak, aby jej definicja zawierała tylko jeden atrybut <i>tekst</i>, 
+        który będzie obiektem klasy <i>String</i> i tylko jeden konstruktor. Poniżej znajduje się
+        kod testowy klasy.
+<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      <b>kod programu</b>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      <b>wynik działania programu</b>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Sentence s1=new Sentence("tylko","KOT"),
+          s2=new Sentence("a","myszy", 2),
+          s3=new Sentence(s1,s2,"calkiem","same"),
+          s4=new Sentence(s3, "na", new Integer(32), "ulicy");
+
+
+ System.out.println(s1);
+
+ System.out.println(s2);
+
+ System.out.println(s3);
+
+ System.out.println(s4);
+</PRE>
+      </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+ Tylko kot.
+
+ A myszy 2.
+
+ Tylko kot a myszy 2 calkiem same.
+
+ Tylko kot a myszy 2 calkiem same na 32 ulicy.
+</PRE>
+      </td>
+    </tr>
+  </tbody>
+</table>
+           <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+
+
+
+      <li> &nbsp; <B> Zadanie 4 </b><br><br>
+W tablicy kwadratowej ustalić pozycję elementu o najmniejszej wartości. Następnie utworzyć tablicę usuwając z tablicy pierwotnej wiersz(e) i kolumn(ę)/(y), na przecięciu których znajduje się element o minimalnej wartości.
+Kod testujący znajduje się poniżej.
+<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>kod programu</b>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>wynik działania programu</b>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ int[][] data={{2,0,8,9},
+               {3,0,-1,20},
+               {13,12, 17, 18},
+               {1, 2, 3, 4},
+               {2, 0, 7, 9} }; 
+
+ Table t1=new Table(data);
+
+ Table t2=t1.getWithoutMin();
+
+ Table t3=t2.getWithoutMin();
+
+
+ System.out.println(t1);
+
+
+
+
+
+
+ System.out.println(t2);
+
+
+
+
+
+ System.out.println(t3);</PRE>
+      </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    2   0   8   9
+    3   0  -1  20
+   13  12  17  18
+    1   2   3   4
+    2   0   7   9
+
+
+    2   0    9
+   13  12   18
+    1   2    4
+    2   0    9
+
+
+   13  18
+    1   4
+</PRE>
+      </td>
+    </tr>
+  </tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="11"><BR><br>
+
+
+
+      </li><li> &nbsp; <b> Zadanie 5</b> <br><br>
+          Zdefiniuj klasę <i>Klocek</i>, która będzie przechowywała podstawowe
+          informacje o&nbsp;drewnianym klocku. Jedyne atrybuty w klasie <i>Klocek</i> przedstawiono poniżej we fragmencie diagramu tej klasy.<br>
+
+    <p align=center><img src="./images/lab1.gif"> </p>
+          Szerokość klocka to najdłuższy z podanych boków, zaś wysokość to najkrótszy.<br><br>
+
+          Następnie zdefiniuj klasę <i>Wieza</i> w której należy umieścić poza niezbędnymi elementami tylko jedną
+          postać  metody <i>add</i>, która umożliwia 
+          dokładanie klocków do tworzonej wieży.  Do sprawdzenia
+          poprawności swojego kodu wykorzystaj poniższy kod testujący.
+<br><br>
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>kod testowy</font>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>wynik działania</font>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+    <pre>
+ Klocek k1=new Klocek("yellow",1,5,4);
+ Klocek k2=new Klocek("blue",2,2,6);
+ Klocek k3=new Klocek("green",3,4,2);
+ Klocek k4=new Klocek("yellow",1,5,4);
+
+ Wieza wieza=new Wieza();
+
+
+ wieza.add(k1,k2,k3);
+
+ System.out.println(wieza);
+
+
+
+
+
+ wieza.add(k2);
+
+ wieza.add(k4);
+
+ System.out.println(wieza);
+
+
+
+
+
+
+ wieza.delete(k1);
+
+ wieza.delete(k1);
+
+
+ System.out.println(wieza);
+</PRE></td>
+ <td valign="Top">
+    <pre>
+
+
+
+
+ 
+ Wieza nie zawiera zadnych klockow 
+ ----------------------------------
+
+ INFO: dodalem 3 klocki
+
+ klocek: green, podstawa: 4cm x 3cm, grubosc: 2 cm
+ klocek: blue, podstawa: 6cm x 2cm, grubosc: 2 cm
+ klocek: yellow, podstawa: 5cm x 4cm, grubosc: 1 cm
+ --------------------------------------------------
+
+
+ ERR: ten klocek znajduje sie juz w wiezy
+
+ INFO: dodalem 1 klocek
+
+ klocek: yellow, podstawa: 5cm x 4cm, grubosc: 1 cm
+ klocek: green, podstawa: 4cm x 3cm, grubosc: 2 cm
+ klocek: blue, podstawa: 6cm x 2cm, grubosc: 2 cm
+ klocek: yellow, podstawa: 5cm x 4cm, grubosc: 1 cm
+ --------------------------------------------------
+
+
+ INFO: usunalem 1 klocek
+
+ ERR: ten klocek nie znajduje sie w wiezy
+
+
+ klocek: yellow, podstawa: 5cm x 4cm, grubosc: 1 cm
+ klocek: green, podstawa: 4cm x 3cm, grubosc: 2 cm
+ klocek: blue, podstawa: 6cm x 2cm, grubosc: 2 cm
+ --------------------------------------------------
+</pre>
+ </td> </tr></tbody>
+</table>
+   <hr color="#dd0000" size="14" width="100%"><br><br>
+</li></ul></body></html>
