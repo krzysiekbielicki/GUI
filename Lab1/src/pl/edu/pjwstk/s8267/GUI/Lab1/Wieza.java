@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class Wieza {
 
-	private ArrayList<Klocek> klocki
-	;
+	private ArrayList<Klocek> klocki;
 	
 	public Wieza() {
 		klocki = new ArrayList<Klocek>();
@@ -23,7 +22,7 @@ public class Wieza {
 			}
 		}
 		if(affectedElements > 0)
-			System.out.println("INFO: dodalem "+affectedElements+" kloc"+(affectedElements>1?"ki":"ek"));
+			System.out.println("INFO: dodalem "+affectedElements+" kloc"+(affectedElements>1?(affectedElements>4?"ków":"ki"):"ek"));
 	}
 
 	private void add(Klocek ...  klocki) {
@@ -37,7 +36,7 @@ public class Wieza {
 			}
 		}
 		if(affectedElements > 0)
-			System.out.println("INFO: usunalem "+affectedElements+" kloc"+(affectedElements>1?"ki":"ek"));
+			System.out.println("INFO: usunalem "+affectedElements+" kloc"+(affectedElements>1?(affectedElements>4?"ków":"ki"):"ek"));
 	}
 	
 	public String toString() {
