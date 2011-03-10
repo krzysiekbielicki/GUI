@@ -1,19 +1,42 @@
 package pl.edu.pjwstk.s8267.GUI.Lab2;
 
 public class EqSystem {
-
+	private static int nextNumber = 101;
+	private Equation[] tab;
+	private int number;
 	public EqSystem(Equation[] tab) {
-		// TODO Auto-generated constructor stub
+		this.tab = tab.clone();
+		number = nextNumber++;
 	}
 
-	private static void setNextNumber(int i) {
-		// TODO Auto-generated method stub
-		
+	public static void setNextNumber(int i) {
+		nextNumber = i;
 	}
 
-	private String getSolution() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getSolution() {
+		double W = tab[0].getA()*tab[1].getB()-tab[0].getB()*tab[1].getA();
+		double Wx = tab[0].getC()*tab[1].getB()-tab[0].getB()*tab[1].getC();
+		double Wy = tab[0].getA()*tab[1].getC()-tab[0].getC()*tab[1].getA();
+		String ret;
+		if(W == 0)
+			if(Wx+Wx == 0)
+				ret = "ma nieskończenie wiele rozwiązań";
+			else
+				ret = "jest sprzeczny";
+		else {
+			double x = Wx/W;
+			double y = Wy/W;
+			ret = "ma dokładnie jedno rozwiązanie:\nx="+x+", y="+y;
+		}
+		return "Układ ("+number+") "+ret;
+	}
+	
+	public String toString() {
+		return 	 "("+number+")\t+---\n"
+	       		+"\t| "+tab[0]+"\n"
+	       		+"\t| "+tab[1]+"\n"
+	       		+"\t+---";
+
 	}
 
 	public static void main(String[] args) {
