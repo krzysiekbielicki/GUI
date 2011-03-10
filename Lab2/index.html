@@ -1,0 +1,526 @@
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 2</title>
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1>Relacje między obiektami... <br>
+      czyli obiektowa korupcja po raz pierwszy</H1>
+  <p align=right><img src="./images/line.gif"> 
+  <p>
+  <ul>
+
+
+
+      <li> &nbsp; <B> Zadanie 1 </B> <BR><br>
+          Zdefiniuj klasę <i>Bilet</i>, której jednym z atrybutów (pól)
+          jest data, będąca obiektem klasy <i>Data</i>. Opisana słownie relacja między 
+          obiektami tych klas została przedstawiona na poniższym rysunku.
+          <br>
+          <p align=center><img src="./images/lab2a.gif"> </p>
+          Zdefiniuj klasy w taki sposób, aby poniższy kod testujący wykonał
+          się w przedstawiony poniżej sposób.
+
+ <br><br>
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>kod testowy</font>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>wynik działania</font>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+    <pre>
+ Data data1=new Data(30,4,2002);
+ Bilet impreza1=new Bilet("koncert Petera Gabriela",
+                          "Poznan",data1
+                         ); 
+
+ data1.zmienDzien(6);
+ data1.zmienMiesiac(12);
+ data1.zmienRok(2004);
+ Bilet impreza2=new Bilet("koncert Diany Krall",
+                          "Warszawa",data1
+                         ); 
+
+ <b>Data data2=impreza2.podajDate();</b>
+
+ <b>data2.przesun(30);</b>
+ Bilet impreza3=new Bilet("Urodziny Panny X",
+                          "magiczne miejsce",data2
+                         ); 
+
+ System.out.println(impreza1);
+
+
+
+
+ System.out.println(impreza2);
+
+
+
+
+ System.out.println(impreza3);</PRE></td>
+ <td valign="Top">
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+     Co:  koncert Petera Gabriela
+  Gdzie:  Poznan
+  Kiedy:  30 kwietnia 2002
+
+
+     Co:  koncert Diany Krall
+  Gdzie:  Warszawa
+  Kiedy:  6 grudnia 2004
+
+
+     Co:  Urodziny Panny X
+  Gdzie:  magiczne miejsce
+  Kiedy:  5 stycznia 2005</pre>
+ </td> </tr></tbody>
+</table><BR> 
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 2 </b><br><br>
+          Zdefiniuj klasę <i>WorldString</i>, której metody umożliwiać mają
+          wyświetlanie przechowywanego w obiekcie wyrazu, w dowolny sposób, m. in.
+          po "europejsku" (od lewej do prawej lub od góry na dół), 
+          po arabsku (od prawej do lewej), po chińsku (od dołu do góry).<br>
+          Wykorzystaj poniższy kod testujący.<br><br>
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>kod testowy</font>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><h4>wynik działania</font>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+    <pre>
+ WorldString w1 = new WorldString("Eukaliptus");
+ WorldString w2 = new WorldString("Yuka",
+                                  <b>WorldString.LEFT|WorldString.DOWN</b>
+                                 );
+ WorldString w3 = new WorldString("Kaktus",
+                                  <b>WorldString.RIGHT|WorldString.UP</b>
+                                 );
+
+ System.out.println(w1);
+
+ System.out.println(w2);
+
+
+
+
+ System.out.println(w3);
+
+
+
+
+
+
+ w1.println(<b>WorldString.RIGHT</b>);
+ System.out.println(w1);
+
+ w2.println(<b>WorldString.LEFT|WorldString.UP</b>); 
+
+
+
+
+ w2.println(<b>WorldString.UP</b>); 
+
+
+
+
+ w2.println(<b>WorldString.DOWN</b>); 
+
+
+
+
+ System.out.println(w2);
+
+
+
+
+ w3.setPosition(<b>WorldString.RIGHT|WorldString.DOWN</b>);
+ System.out.println(w3);
+
+
+
+
+
+
+ w3.println(<b>WorldString.LEFT|WorldString.RIGHT|WorldString.DOWN</b>); </PRE></td>
+ <td valign="Top">
+    <pre>
+
+
+
+
+
+
+
+ 
+ Eukaliptus
+
+ Y
+  u
+   k
+    a
+
+s 
+ u
+  t
+   k
+    a
+     K
+
+ sutpilakuE
+ Eukaliptus
+
+    a
+   k
+  u
+ Y
+
+ a
+ k
+ u
+ Y
+
+ Y
+ u
+ k
+ a
+
+ Y
+  u
+   k
+    a
+
+
+     K  
+    a 
+   k
+  t
+ u   
+s    
+
+ Err: too many parameters</pre>
+
+ </td> </tr></tbody>
+</table><BR> 
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 3 (statycznie, nie statecznie...)</B> <BR><br>
+
+          
+ Zdefiniuj klasę <i>Zespolona</i>, która odzwierciedla pojęcie liczby zespolonej, w taki
+ sposób aby było możliwe uruchomienie poniższego kodu testowego.
+<br><br>
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>kod programu</b>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>wynik działania programu</b>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+  Zespolona z1= new Zespolona(1,2);
+  Zespolona z2= new Zespolona(2,-1);
+  System.out.println(z1);
+
+  System.out.println(z2);
+
+  Zespolona.setNextName('P');
+  Zespolona z3=new Zespolona(4,3);
+  Zespolona z4=new Zespolona(0,0);
+
+  System.out.println(z1.getName()+" = "+z1);
+
+  System.out.println(z2.getName()+" = "+z2);
+
+  System.out.println(z3.getName()+" = "+z3);
+
+  System.out.println(z4.getName()+" = "+z4);
+
+
+  Zespolona.wyswietlDzielenie(z1,z2);
+
+
+
+  z1.wyswietlDzielenie(z3);
+
+
+
+
+  z1.wyswietlDzielenie(z4);</PRE>
+      </td>
+    <td valign="Top">
+	<pre>
+
+
+1.0+2.0i
+
+2.0-1.0i
+
+
+
+
+
+A = 1.0+2.0i
+
+B = 2.0-i
+
+P = 4.0+3.0i
+
+Q = 0
+
+
+ A     1.0+2.0i
+--- = ---------- = i
+ B     2.0-1.0i
+
+ A     1.0+2.0i
+--- = ---------- = 0.4+0.2i
+ P     4.0+3.0i
+
+
+ A
+---  Err: nie mozna dzielic przez ZERO!
+ Q</PRE>     </td>
+    </tr>
+  </tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+
+
+      <li> &nbsp; <B> Zadanie 4</B> <BR><br>
+
+          
+       Zdefiniuj (między innymi) klasę <i>EqSystem</i> odpowiadającej układowi równań z dwiema
+      niewiadomymi.<br><br>
+
+      Atrybutami klasy <i>EqSystem</i> powinny być obiekty klasy <i>Equation</i>. Relację między tymi klasami ilustruje poniższy diagram klas. 
+
+        <p align=center><img src="./images/lab2b.gif"></p>
+
+Wykorzystaj do testów poniższy fragment kodu.<bR><br>
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="90%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>kod programu</b>
+      </td>
+      <td valign="Top" bgcolor="#FF8C00">
+      </font><b>wynik działania programu</b>
+      </td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ int t1[]={1,-2,0};
+ Equation r1=new Equation(t1);
+  		
+ Equation tab[]={r1,
+                 new Equation(new int[]{3,1,28})
+ };
+  	   
+ System.out.println("---------------------- 0. checkpoint");
+ System.out.println(tab[0]); 
+ System.out.println(tab[1]); 
+  	   	  
+
+ EqSystem s1=new EqSystem(tab);
+ System.out.println("\n---------------------- 1. checkpoint");
+
+ System.out.println(s1);
+  	   
+
+
+ System.out.println(s1.getSolution());
+
+	   
+ EqSystem.setNextNumber(2008); //przygotowanie do drugiego próby
+ int t2[]={-7,-7,34};
+ t1[0]=1; t1[1]=1;
+ tab[0]=new Equation(t1);
+ tab[1]=new Equation(t2);
+ EqSystem s2=new EqSystem(tab);
+ System.out.println("\n---------------------- 2. checkpoint");
+
+ System.out.println(s2);
+  	   	  
+
+
+
+ System.out.println("\n---------------------- 3. checkpoint");
+
+ System.out.println(s1);
+
+
+
+ System.out.println(s1.getSolution()+"\n\n\n");
+
+
+
+
+ System.out.println(s2);
+
+
+
+
+ System.out.println(s2.getSolution());
+	   
+ // przygotowanie do czwartej, ostatniej próby
+ Equation tab2[]={ new Equation(new int[]{3,1,5}),
+                   new Equation(new int[]{9,3,15})
+ };
+ EqSystem s3=new EqSystem(tab2);
+
+ System.out.println("\n---------------------- 4. checkpoint");
+
+ System.out.println(s3);
+
+
+
+ System.out.println(s3.getSolution());
+</PRE>
+      </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+---------------------- 0. checkpoint
+x + -2y = 0
+3x + y = 28
+
+
+
+---------------------- 1. checkpoint
+(101)  +---
+       | x + -2y = 0
+       | 3x + y = 28
+       +---
+
+Uklad (101) ma dokladnie jedno rozwiazanie:
+ x=8, y=4
+
+
+
+
+
+
+
+---------------------- 2. checkpoint
+(2008)  +---
+        | x + y = 0
+        | -7x + -7y = 34
+        +---
+
+
+---------------------- 3. checkpoint
+(101)  +---
+       | x + -2y = 0
+       | 3x + y = 28
+       +---
+
+Uklad (101) ma dokladnie jedno rozwiazanie:
+ x=8, y=4
+
+
+
+(2008)  +---
+        | x + y = 0
+        | -7x + -7y = 34
+        +---
+
+Uklad (2008) jest sprzeczny
+
+
+
+
+
+
+
+---------------------- 4. checkpoint
+(2009)  +---
+        | 3x + y = 5
+        | 9x + 3y = 15
+        +---
+
+Uklad (2009) ma nieskonczenie wiele rozwiazan  
+</PRE>
+      </td>
+    </tr>
+  </tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+
+
+
+</ul>
+</body>
+</html>
