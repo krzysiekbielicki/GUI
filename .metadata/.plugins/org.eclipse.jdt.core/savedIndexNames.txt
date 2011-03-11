@@ -1,0 +1,12 @@
+INDEX VERSION 1.126+/home/skyman/PJWSTK/GUI/.metadata/.plugins/org.eclipse.jdt.core
+1948394962.index
+1086448465.index
+97936698.index
+3236204721.index
+1199493188.index
+3433197788.index
+149229772.index
+460390469.index
+2314027197.index
+119453211.index
+2188923391.index

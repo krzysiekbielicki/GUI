@@ -1,0 +1,53 @@
+package pl.edu.pjwstk.s8267.GUI.Lab2;
+
+public class Zespolona {
+	public Zespolona(int i, int j) {
+		// TODO Auto-generated constructor stub
+	}
+
+	private void wyswietlDzielenie(Zespolona z3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void wyswietlDzielenie(Zespolona z1, Zespolona z2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void setNextName(char c) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		Zespolona z1 = new Zespolona(1, 2);
+		Zespolona z2 = new Zespolona(2, -1);
+		System.out.println(z1);
+
+		System.out.println(z2);
+
+		Zespolona.setNextName('P');
+		Zespolona z3 = new Zespolona(4, 3);
+		Zespolona z4 = new Zespolona(0, 0);
+
+		System.out.println(z1.getName() + " = " + z1);
+
+		System.out.println(z2.getName() + " = " + z2);
+
+		System.out.println(z3.getName() + " = " + z3);
+
+		System.out.println(z4.getName() + " = " + z4);
+
+		Zespolona.wyswietlDzielenie(z1, z2);
+
+		z1.wyswietlDzielenie(z3);
+
+		z1.wyswietlDzielenie(z4);
+	}
+}
