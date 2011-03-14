@@ -1,0 +1,509 @@
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 3</title>
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1>Polityka relacji między obiektami... [czyli obiektowej korupcji cd.]</H1>
+  <p align=right><img src="./images/line.gif"> 
+  <div class="c"><i>"Obiekt A poinformował obiekt B, że
+  obiekt C <font color="ff0000"><b>dziedziczy</B></FONT> wszystko po obiekcie D. 
+  Ten ostatni nie wiedział, że <font color="ff0000"><b>składa się</B></FONT> 
+  z kilku obiektów E, które <font color="ff0000"><b>są podobne</B></FONT> do 
+  obiektów F. Zastanawiano się w mieście, kto jest czyją 
+  <font color="ff0000"><b>generalizacją...</B></FONT>"</I><br>
+  <div align=right>/podała Obiektowo Zorientowana Obiektywna TAI/</div>
+  </div><br><br>
+  <p>
+  <ul>
+      <li> &nbsp; <B> Zadanie 1 (dziedziczenie, konstruktory)</B> <BR><br>
+Zdefiniuj klasy <i>Pies</i> i <i>RasowyPies</i> tak, aby początkujący programista-weterynarz mógł przechowywać w obiektach tych klas podstawowe informacje o swoich pacjentach. Poniżej przedstawiono kod testujący.<br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Pies sfora[]={new Pies(76589,"As","biało-czarny",18,
+                        "Anna","Nowak"),
+               new RasowyPies(45321,"Labrador","Elf","czarny",25, 
+                              "Agus","Mati","Barbara","Klopotek"),
+               new Pies(102467,"Kumpel","brazowy, podpalany",89,
+                        "Zennon","Kula"),
+                new RasowyPies(9678,"York","Beta","brazowy",8,
+                        "Emka","Fidelus","Alicja","Kot")}; 	
+	 
+ for(int i=0; i &lt sfora.length; i++)
+   <b>System.out.println(sfora[i]+"\n\n");</B>
+</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+	
+
+
+
+
+
+
+
+
+
+ -------------------------------
+ identyfikator:         00076589
+ WLASCICIEL: Anna Nowak 
+
+ IMIE: AS
+ masc: biało-czarny
+ wiek: 1 rok i 6 miesiecy
+ -------------------------------
+
+
+ -------------------------------
+ identyfikator:         00045321
+ WLASCICIEL: Barbara Klopotek
+
+ IMIE: ELF
+ masc: czarny
+ wiek: 2 lata(a) i 1 miesiac
+ -------------------------------
+ Pies rasowy
+ -------------------------------
+ RASA: Labrador
+ MATKA: Agus
+ OJCIEC: Mati
+ MIOT: 5
+ -------------------------------
+
+
+ -------------------------------
+ identyfikator:         00102467
+ WLASCICIEL: Zennon Kula
+
+ IMIE: KUMPEL
+ masc: brazowy, podpalany
+ wiek: 7 lat(a) i 5 miesiecy
+ -------------------------------
+
+
+ -------------------------------
+ identyfikator:         00009678       
+ WLASCICIEL: Alicja Kot 
+
+ IMIE: BETA
+ masc: brazowy
+ wiek: 8 miesiecy
+ -------------------------------
+ Pies rasowy
+ -------------------------------
+ RASA: York
+ MATKA: Emka
+ OJCIEC: Fidelus
+ MIOT: 2
+ -------------------------------</PRE>
+      </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+
+      <li> &nbsp; <B> Zadanie 2 (dziedziczenie, konstruktory)</B> <BR><br>
+Zmodyfikuj klasy <i>Pies</i> i <i>RasowyPies</i> tak, aby ten sam kod testowy zadziałał ciut inaczej. <br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Pies sfora[]={new Pies(76589,"As","biało-czarny",18,
+                        "Anna","Nowak"),
+               new RasowyPies(45321,"Labrador","Elf","czarny",25, 
+                              "Agus","Mati","Barbara","Klopotek"),
+               new Pies(102467,"Kumpel","brazowy, podpalany",89,
+                        "Zennon","Kula"),
+                new RasowyPies(9678,"York","Beta","brazowy",8,
+                        "Emka","Fidelus","Alicja","Kot")}; 	
+	 
+ for(int i=0; i &lt sfora.length; i++)
+   <b>System.out.println(sfora[i]+"\n\n");</B>
+</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+	
+
+
+
+
+
+
+
+
+
+ -------------------------------
+ Pies wielorasowy
+ -------------------------------
+ identyfikator:         00076589
+ WLASCICIEL: Anna Nowak 
+
+ IMIE: AS
+ masc: biało-czarny
+ wiek: 1 rok i 6 miesiecy
+ -------------------------------
+
+
+ -------------------------------
+ Pies rasowy
+ -------------------------------
+ identyfikator:         00045321
+ WLASCICIEL: Barbara Klopotek
+
+ IMIE: ELF
+ masc: czarny
+ wiek: 2 lata(a) i 1 miesiac
+ -------------------------------
+ RASA: Labrador
+ MATKA: Agus
+ OJCIEC: Mati
+ MIOT: 5
+ -------------------------------
+
+
+ -------------------------------
+ Pies wielorasowy
+ -------------------------------
+ identyfikator:         00102467
+ WLASCICIEL: Zennon Kula
+
+ IMIE: KUMPEL
+ masc: brazowy, podpalany
+ wiek: 7 lat(a) i 5 miesiecy
+ -------------------------------
+
+
+ -------------------------------
+ Pies rasowy
+ -------------------------------
+ identyfikator:         00009678       
+ WLASCICIEL: Alicja Kot 
+
+ IMIE: BETA
+ masc: brazowy
+ wiek: 8 miesiecy
+ -------------------------------
+ RASA: York
+ MATKA: Emka
+ OJCIEC: Fidelus
+ MIOT: 2
+ -------------------------------</PRE>
+      </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+
+
+
+      <li> &nbsp; <B> Zadanie 3 (dziedziczonko dla treningu... + klasa abstrakcyjna)</B> <BR><br>
+
+  Wykorzystując mechanizm dziedziczenia zdefiniuj niezbędne klasy opisujące figury 2D. Jako klasę bazową wykorzystaj abstrakcyjnąś klasę <i>Figura</i>. To testów wykorzystaj poniższy kod.<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Figura sumaNieszczesc[]=
+       { new Kwadrat("red",5),       // bok
+         new Trapez("green",10,8,4), // podstawa dolna, gorna, wysokosc
+         new Kolo("yellow",12),      // promien
+         new Prostokat("grey",7,10), // boki
+         new Trojkat("white",7,4,9)  // boki
+       };
+
+ for(int i=0;i<...;i++){
+   System.out.println("\n\n---------------");
+   System.out.println("      FIGURA: "+sumaNieszczesc[i].getKsztalt());
+   System.out.println("       Kolor: "+sumaNieszczesc[i].getKolor());
+   System.out.println("Powierzchnia: "+sumaNieszczesc[i].getPowierzchnia()+" cm^2");
+   System.out.println("       Obwod: "+sumaNieszczesc[i].getObwod()+" cm");
+ }
+</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+
+---------------
+      FIGURA: Kwadrat
+       Kolor: red
+Powierzchnia: 25.0 cm^2
+       Obwod: 20.0 cm
+
+
+---------------
+      FIGURA: Trapez
+       Kolor: green
+Powierzchnia: 36.0 cm^2
+       Obwod: 26.24621 cm
+
+
+---------------
+      FIGURA: Kolo
+       Kolor: yellow
+Powierzchnia: 452.3893421169302 cm^2
+       Obwod: 75.39822368615503 cm
+
+
+---------------
+      FIGURA: Prostokat
+       Kolor: grey
+Powierzchnia: 70.0 cm^2
+       Obwod: 34.0 cm
+
+
+---------------
+      FIGURA: Trojkat
+       Kolor: white
+Powierzchnia: 13,41641 cm^2
+       Obwod: 20.0 cm</PRE>
+      </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+
+
+
+
+
+      <li> &nbsp; <B> Zadanie 4 ...podsumowując  (2 punkty)</B> <BR><br>
+  <p align=right><b>Hipotetyczna karta egzaminacyjna</B>
+  <hr  color="FFD700" width="80%" size="1">
+<i>"Każdy student co semestr otrzymuje kartę
+egzaminacyjną. Na karcie egzaminacyjnej znajduje się imię i nazwisko studenta,
+semestr na którym znajduje się student, numer albumu i przedmioty do zaliczenia
+(liczba przedmiotów do zaliczenia). W przypadku studentów studiujących na
+drugim, trzecim, czwartym i piątym roku na karcie egzaminacyjnej znajduje się
+dodatkowo symbol specjalności, wybranej przez studenta. Studenci czwartego
+i&nbsp;piątego roku mają na karcie umieszczone nazwisko promotora pracy dyplomowej. 
+Student drugiego roku ma możliwość
+wyboru specjalności, nie ma jednak prawa jej zmieniać, od chwili, gdy znajdzie
+się na szóstym semestrze. Student czwartego roku wybiera promotora i temat
+realizowanej pracy dyplomowej."</i>		   
+ <hr  color="FFD700" width="80%" size="1"><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Karta karty[]={new Karta("Adam",...),
+                new Karta23("Anna",...),
+                new Karta45("Tomasz",...)}; 	
+	 
+ <b>Karta.setStamp("*** PJWSTK ***");</B>  
+ for(int i=0; i &lt karty.length; i++)
+   <b>System.out.print(karty[i]);</B>
+
+   
+   
+   
+   
+   
+  
+  
+  
+  
+  
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+ 
+ karty[0].<b>setSurname("Nowak")</B>;  
+ for(int i=1; i &lt karty.length; i++)
+   karty[i].<b>printCard()</B>;
+   
+   
+   
+ karty[1].<b>setSurname("Janiak")</B>;  
+ 
+ 
+ 
+ karty[2].<b>passed(6,4)</B>;
+ 
+ 
+ 
+ 
+ Karta.setStamp("------> PJWSTK");  
+ 
+ for(int i=0; i &lt karty.length; i++)
+   <b>System.out.print(karty[i]);</B>
+</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+	
+
+	
+	
+	
+	
+<b>*** PJWSTK ***</b>
+IMIE i NAZWISKO: Adam Kowalski
+        SEMESTR: 1
+          GRUPA: 101
+-------------------------------
+<b>          KARTA WIRTUALNA</b>
+-------------------------------
+
+<b>*** PJWSTK ***</b>
+IMIE i NAZWISKO: Anna Malinowska
+        SEMESTR: 4
+          GRUPA: 421
+    SPECJALNOSC: BD 
+-------------------------------
+<b>          KARTA WIRTUALNA</b>
+-------------------------------
+
+<b>*** PJWSTK ***</b>
+IMIE i NAZWISKO: Tomasz Król
+        SEMESTR: 8
+          GRUPA: 823
+    SPECJALNOSC: 3D
+       PROMOTOR: dr hab. XX 
+-------------------------------
+<b>          KARTA WIRTUALNA</b>
+-------------------------------
+
+
+
+Drukowanie karty... --> Anna Malinowska
+Drukowanie karty... --> Tomasz Król
+
+
+ERR: Karta jest wydrukowana, 
+     nie mogę zmienić danych osobowych
+	 
+	 
+KARTA: Tomasz Król
+Zaliczono:  6 przedmiotów 
+ Na ocenę:  4	 
+
+
+
+
+
+<b>------> PJWSTK</b>
+IMIE i NAZWISKO: Adam Nowak
+        SEMESTR: 1
+          GRUPA: 101
+-------------------------------
+<b>          KARTA WIRTUALNA</b>
+-------------------------------
+
+
+<b>*** PJWSTK ***</b>
+IMIE i NAZWISKO: Anna Malinowska
+        SEMESTR: 4
+          GRUPA: 421
+    SPECJALNOSC: BD 
+-------------------------------
+<b>          KARTA WYDRUKOWANA</b>
+-------------------------------
+LICZBA PRZEDMIOTOW 
+     DO ZALICZENIA: 4
+-------------------------------
+
+
+<b>*** PJWSTK ***</b>
+IMIE i NAZWISKO: Tomasz Król
+        SEMESTR: 8
+          GRUPA: 823
+    SPECJALNOSC: 3D
+       PROMOTOR: dr hab. XX 
+-------------------------------
+<b>          KARTA WYDRUKOWANA</b>
+-------------------------------
+LICZBA PRZEDMIOTOW 
+     DO ZALICZENIA: 10
+	 
+ W TYM OCEN:
+        DOBRYCH: 6
+-------------------------------	</PRE>
+      </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 5 (dla wielbicieli skromnej mat*fu...*yki)</B> <BR><br>
+
+    Wykorzystując kod z zadania trzeciego zdefiniuj klasę <i>WielokatForemny</i>, która umożliwi przechowywanie siedmio, ośmio-, dziewięcio- dziesięcio- <i>n</i>- itd. -kątów foremnych wpisanych w okrąg o promieniu <i>r</i>.
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+
+
+
+
+</ul>
+</body>
+</html>

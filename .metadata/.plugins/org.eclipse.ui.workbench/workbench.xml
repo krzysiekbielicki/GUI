@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="718" maximized="true" width="1024" x="0" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -8,12 +8,12 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="104" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="152" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -31,35 +31,30 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EqSystem.java" partName="EqSystem.java" path="/home/skyman/PJWSTK/GUI/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java" title="EqSystem.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="208" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Pies.java" partName="Pies.java" path="/home/PJWSTK/s8267/zet/projects/GUI/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java" title="Pies.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="152" selectionTopPixel="535"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Equation.java" partName="Equation.java" path="/home/skyman/PJWSTK/GUI/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java" title="Equation.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="391" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorldString.java" partName="WorldString.java" path="/home/skyman/PJWSTK/GUI/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java" title="WorldString.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1376" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bilet.java" partName="Bilet.java" path="/home/skyman/PJWSTK/GUI/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java" title="Bilet.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="228" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RasowyPies.java" partName="RasowyPies.java" path="/home/PJWSTK/s8267/zet/projects/GUI/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java" title="RasowyPies.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="654" selectionTopPixel="119"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings (2 items)"/>
+<expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="518" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.resourceField="93" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -67,14 +62,17 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1299019794359">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
@@ -90,14 +88,11 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState/>
@@ -106,20 +101,17 @@
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
-<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
@@ -167,36 +159,25 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.53109246"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-</fastViewBars>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@7a3e72" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">
@@ -209,15 +190,20 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.57239056" ratioLeft="340" ratioRight="254" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@347448" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
@@ -227,11 +213,13 @@
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.5" ratioLeft="221" ratioRight="221" relationship="4" relative="org.eclipse.ui.internal.ViewStack@347448">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -325,163 +313,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Data.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Zespolona.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Zespolona.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java"/>
 </editors>
-<item historyLabel="Zespolona.java" index="2">
+<item historyLabel="WorldString.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Bilet.java" index="1">
 <position/>
 </item>
-<item historyLabel="Data.java" index="1">
-<position info="not_deleted" x="192" y="0"/>
+<item historyLabel="Bilet.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Bilet.java" index="3">
-<position info="not_deleted" x="243" y="16"/>
+<item historyLabel="Bilet.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Data.java" index="1">
-<position info="not_deleted" x="192" y="0"/>
+<item historyLabel="EqSystem.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Bilet.java" index="3">
-<position info="not_deleted" x="259" y="0"/>
+<item historyLabel="EqSystem.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Data.java" index="1">
-<position info="not_deleted" x="613" y="0"/>
+<item historyLabel="WorldString.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Zespolona.java" index="2">
-<position info="not_deleted" x="814" y="0"/>
-</item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="774" y="0"/>
-</item>
-<item historyLabel="Zespolona.java" index="2">
-<position info="not_deleted" x="796" y="0"/>
-</item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="1341" y="4"/>
-</item>
-<item historyLabel="Zespolona.java" index="2">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="1341" y="4"/>
-</item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="83" y="0"/>
-</item>
-<item historyLabel="Equation.java" index="0">
+<item historyLabel="WorldString.java" index="3">
 <position/>
 </item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="243" y="0"/>
+<item historyLabel="Bilet.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="236" y="0"/>
+<item historyLabel="WorldString.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="397" y="0"/>
+<item historyLabel="Zespolona.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="1234" y="0"/>
+<item historyLabel="Zespolona.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="232" y="0"/>
+<item historyLabel="EqSystem.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="Bilet.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="1234" y="0"/>
+<item historyLabel="WorldString.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="Zespolona.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="1234" y="0"/>
+<item historyLabel="EqSystem.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="WorldString.java" index="4">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="Bilet.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="1118" y="0"/>
+<item historyLabel="WorldString.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="232" y="0"/>
+<item historyLabel="Zespolona.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="1118" y="0"/>
+<item historyLabel="EqSystem.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="Zespolona.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="232" y="0"/>
+<item historyLabel="WorldString.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="Bilet.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="849" y="0"/>
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="1880" y="0"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="910" y="0"/>
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="0" y="1880"/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="916" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="940" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="946" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="783" y="0"/>
-</item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="232" y="0"/>
-</item>
-<item historyLabel="Equation.java" index="0">
-<position info="not_deleted" x="391" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="783" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
+<item historyLabel="Pies.java" index="7">
 <position/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="662" y="0"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="0" y="662"/>
+</item>
+<item historyLabel="Pies.java" index="7">
 <position/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
+<item historyLabel="RasowyPies.java" index="8">
 <position/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="199" y="0"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
 <position/>
 </item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="549" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="680" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="633" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="206" y="0"/>
-</item>
-<item historyLabel="Bilet.java" index="6">
-<position info="not_deleted" x="228" y="0"/>
-</item>
-<item historyLabel="EqSystem.java" index="5">
-<position info="not_deleted" x="206" y="0"/>
-</item>
-<item active="true" historyLabel="EqSystem.java" index="5">
+<item historyLabel="Pies.java" index="7">
 <position/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="320" y="0"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="410" y="0"/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="60" y="128"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="309" y="0"/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="1257" y="0"/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position/>
+</item>
+<item historyLabel="Pies.java" index="7">
+<position/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="158" y="0"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="625" y="0"/>
+</item>
+<item historyLabel="RasowyPies.java" index="8">
+<position info="not_deleted" x="654" y="0"/>
+</item>
+<item active="true" historyLabel="Pies.java" index="7">
+<position info="not_deleted" x="1872" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -507,23 +497,29 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bilet.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java">
-<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RasowyPies.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java">
+<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorldString.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java">
-<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Data.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Data.java">
-<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Data.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Equation.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java">
-<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Pies.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java">
+<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Pies.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EqSystem.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java">
 <persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/EqSystem.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Zespolona.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Zespolona.java">
 <persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Zespolona.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorldString.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java">
+<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/WorldString.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bilet.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java">
+<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Bilet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Data.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Data.java">
+<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Data.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Equation.java" tooltip="Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java">
+<persistable path="/Lab2/src/pl/edu/pjwstk/s8267/GUI/Lab2/Equation.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Klocek.java" tooltip="Lab1/src/pl/edu/pjwstk/s8267/GUI/Lab1/Klocek.java">
 <persistable path="/Lab1/src/pl/edu/pjwstk/s8267/GUI/Lab1/Klocek.java"/>
