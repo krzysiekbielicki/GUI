@@ -1,0 +1,5 @@
+package pl.edu.pjwstk.s8267.GUI.Lab3;
+
+public class RasowyPies extends Pies {
+
+}
