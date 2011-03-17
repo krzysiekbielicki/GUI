@@ -1,7 +1,7 @@
 package pl.edu.pjwstk.s8267.GUI.Lab3;
 
 public class RasowyPies extends Pies {
-	protected static final String header = "-------------------------------\n Pies rasowy\n -------------------------------";
+	private static final String header = "-------------------------------\n Pies rasowy\n-------------------------------\n";
 	
 	private String rasa;
 	private String imieOjca;
@@ -16,7 +16,13 @@ public class RasowyPies extends Pies {
 	}
 	
 	public String toString() {
-		return super.toString();
+		String ret = super.toString(header);
+		ret += String.format("\nRASA: %s\n", rasa);
+		ret += String.format("MATKA: %s\n", imieMatki);
+		ret += String.format("OJCIEC: %s\n", imieOjca);
+		ret += String.format("MIOT: %d\n", imie.charAt(0)-'A'+1);
+		ret += "-------------------------------";
+		return ret;
 	}
 
 }

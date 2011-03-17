@@ -1,9 +1,9 @@
 package pl.edu.pjwstk.s8267.GUI.Lab3;
 
 public class Pies {
-	protected static final String header = "-------------------------------\n Pies wielorasowy\n-------------------------------\n";
+	private static final String header = "-------------------------------\n Pies wielorasowy\n-------------------------------\n";
 	private int id, wiek;
-	private String imie, kolor, imieWlasciciela, nazwiskoWlasciciela;
+	protected String imie, kolor, imieWlasciciela, nazwiskoWlasciciela;
 	public Pies(int id, String imie, String kolor, int wiek, String imieWlasciciela,
 			String nazwiskoWlasciciela) {
 		this.id = id;
@@ -29,6 +29,10 @@ public class Pies {
 	}
 	
 	public String toString() {
+		return toString(header);
+	}
+	
+	public String toString(String header) {
 		String ret = header; 
 		ret += String.format("identyfikator:         %08d\n", id);
 		ret += String.format("WLASCICIEL: %s %s\n", imieWlasciciela, nazwiskoWlasciciela);
