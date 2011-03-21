@@ -1,0 +1,391 @@
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 4</title>
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1>Klasy, <font color=red>interfejsy</font>... pełen wachlarz szaleństwa recyklingu</H1>
+  <p align=right><img src="./images/line.gif"> </p>
+
+<ul>
+
+    <li> &nbsp; <B> Zadanie 1 </B> <BR><br>
+       Zdefiniuj interfejs <i>MultiLingual</i>, w którym, poza odpowiednimi stałymi, jest zadeklarowana metoda 
+<i>get</i>(...). Klasy implementujące ten interfejs mają umożliwiać wyświetlenie opisów w różnych językach.<br>
+<br>
+W definicjach wszystkich klas mają znajdować się tylko <b>niezbędne atrybuty naturalne</b>.<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+  MultiLingual gatecrasher[]={ new Data(3,12,1998),
+                               new Data(10,6,1924,MultiLingual.ENG),
+                               new Book("Sekret","Rhonda Byrne", "Nowa proza",2007),
+                               new Book("Tuesdays with Morrie",
+                                        "Mitch Albom", "Time Warner Books",2003,
+                                        MultiLingual.ENG),
+                               new Money(1232895/33.0,MultiLingual.PL),
+                               new Money(134566/23.0,MultiLingual.ENG),
+		             };  
+		                             
+		
+  System.out.println("-------------- 1st checkpoint");
+  for(int i=0;i < gatecrasher.length;i++)
+    System.out.println(gatecrasher[i]+"\n");
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  System.out.println("\n\n-------------- 2nd checkpoint");
+  for(int i=0;i < gatecrasher.length;i++)
+    System.out.println(gatecrasher[i].get(MultiLingual.ENG)+"\n");
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  System.out.println("\n\n-------------- 3rd checkpoint");
+  for(int i=0;i < gatecrasher.length;i++)
+    System.out.println(gatecrasher[i]+"\n");</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+
+
+
+-------------- 1st checkpoint
+
+3 grudnia 1998
+
+10th of June 1924
+
+Autor: Rhonda Byrne
+Tytul: Sekret
+Wydawnictwo: Nowa proza 2007
+
+Author: Mitch Albom
+Title: Tuesdays with Morrie
+Publishing House: Time Warner Books 2003   
+
+37 360,45 PLN
+
+5,850.70 GBP
+
+
+
+-------------- 2nd checkpoint
+3rd of December 1998
+
+10th of June 1924
+
+Author: Rhonda Byrne
+Title: Sekret
+Publishing House: Nowa proza 2007
+
+Author: Mitch Albom
+Title: Tuesdays with Morrie
+Publishing House: Time Warner Books 2003
+
+37,360.45 GBP
+
+5,850.70 GBP
+
+
+
+-------------- 3rd checkpoint
+3 grudnia 1998
+
+10th of June 1924
+
+Autor: Rhonda Byrne
+Tytul: Sekret
+Wydawnictwo: Nowa proza 2007
+
+Author: Mitch Albom
+Title: Tuesdays with Morrie
+Publishing House: Time Warner Books 2003
+
+37 360,45 PLN
+
+5,850.70 GBP</PRE>
+      </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+
+<BR><br><BR><br>
+
+
+
+
+
+          <hr color="#0000DD" width="70%" align=center size="2">
+       Edytory tekstu umożliwiają użytkownikowi tzw. <i>"justowanie"</I>, czyli 
+       wyrównanie tekstu do prawej, lewej lub do środka. <br>
+       Zdefiniuj interfejs <i>Justification</i>. Wszystkie definiowane w ramach laboratorium klasy implementujące 
+       ten interfejs powinny zawierać definicję metody <i>justify(...)</i>, która
+       zwraca łańcuch znaków w obrębie którego zawarta w nim informacja
+       wyrównana jest w jeden z trzech dostępnych sposobów: LEFT, CENTER, RIGHT.
+          <hr color="#0000DD" width="70%" align=center size="2"><br><br><br>
+  
+      <li> &nbsp; <B> Zadanie 2</B> <BR><br>
+
+       Zdefiniuj klasy <i>FormattedString</i>, <i>FormattedInt</i> i <i>FormattedDouble</i> które implementuje wspomniany interfejs,
+       umożliwiając wyświetlenie łańcucha znaków  lub liczby  na 
+       określonej liczbie pozycji w podany jako parametr sposób wyrównania.
+
+       Wykorzystaj poniższy kod testujący.<br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ Justification[] t={new FormattedString("Alicja",20), // na 20 miejscach
+                    new FormattedInt(345,20),
+                    new FormattedString("w krainie",20),
+                    new FormattedInt(-7.5,20,5),  // na 20 miejscach, 5 po przecinku 
+                    new FormattedString("kota",20)};  
+
+ System.out.println("123456789*123456789*");	 
+ for(int i=0;i&ltt.length;i++)
+   System.out.println(<b>t[i].justify(Justification.LEFT)</B>+"<---");
+
+
+
+
+ for(int i=0;i&ltt.length;i++)
+   System.out.println(<b>t[i].justify(Justification.CENTER)</B>+"<---");
+
+
+
+
+ for(int i=0;i&ltt.length;i++)
+   System.out.println(<b>t[i].justify(Justification.RIGHT)</B>+"<---");</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+  123456789*123456789*
+
+  Alicja              <---
+  345                 <---
+  w krainie           <--- 
+  -7.50000            <---
+  kota                <--- 
+
+         Alicja       <---  
+          347         <---
+       w krainie      <---
+        -7.50000      <--- 
+          kota        <---
+
+                Alicja<---
+                   345<---
+             w krainie<---	
+              -7.50000<---
+                  kota<---</PRE>
+      </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+
+
+
+      <li> &nbsp; <B> Zadanie 3 (zadanie inspirowane pięknym zadaniem p. dra Barteczki)</B> <BR><br>
+
+       Zdefiniuj klasę <i>MySimpleIt</i>, która implementując  interfejsy <i>Iterable</i> i <i>Iterator</i> umożliwi
+     wykonanie poniższego kodu testowego.<br><br>
+
+  <b>Uwaga</b>: Atrybutami klasy ani zmiennymi w metodach <b><font color=blue>nie mogą
+   być</font> ani tablice ani kolekcje.</b><br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre> MySimpleIterator msi=new MySimpleIterator(10,100,
+                           MySimpleIt.PRIME_NUMBERS);
+		
+ for(int el: msi)
+   System.out.print(el+" ");	
+ System.out.println();
+
+ msi.setType(MySimpleIterator.ODD_NUMBERS);
+ msi.setLimits(15,30);
+ for(int el: msi)
+   System.out.print(el+" ");	
+ System.out.println();
+		
+ msi.setType(MySimpleIterator.EVEN_NUMBERS);
+ for(int el: msi)
+   System.out.print(el+" ");	
+ System.out.println();</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+
+
+
+
+
+15 17 19 21 23 25 27 29 
+
+
+
+
+16 18 20 22 24 26 28 30
+</PRE>
+      </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+
+      <li> &nbsp; <B> Zadanie 4 (w pewnym sensie wykopaliska, ale jaki ubaw)</B> <BR><br>
+Zdefiniuj klasę <i>DirectoryTree</i>,
+ której metoda wyświetla drzewo katalogów (<b>tylko</b> katalogów) od podanego jako parametr
+ katalogu rekursywnie w&nbsp;głąb.<br><br>
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="85%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+<pre>
+  DirectoryTree.show(".");   
+</pre>
+    </td>
+    <td valign="Top">
+<pre>
+     .
+     +---A
+     |   +---IMAGES
+     |       +---BACKUP
+     +---ADOKS
+     |   +---ROZDZIAL_2
+     |   +---ROZDZIAL_3
+     |   +---ROZDZIAL_4
+     +---AMSC2005
+     |   +---AMSC2004
+     +---FCCS2005
+     |   +---source
+     |   +---TMP
+     +---LODZ2004
+     +---ZAKOPANE2004
+     +---DYDAKTYKA
+     |   +---DYDAKTYKA_ISI
+     |   |   +---COLLS
+     |   |   |   +---Q1
+     |   |   |   +---Q2
+     |   |   |   +---RAZEM
+     |   |   |       +---RYSUNKI_COLL1
+     |   |   |       +---RYSUNKI_COLL2
+     |   |   +---IMAGES
+     |   |   +---src
+     |   |   +---WYKLAD5
+     |   +---DYDAKTYKA_PRG
+     |       +---images
+     |       +---POMOC
+     +---DYDAKTYKA_KST
+     |   +---images
+     |   +---src
+     +---DYDAKTYKA_WPR
+         +---images
+         +---src</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+
+
+</ul>
+</body>
+</html>

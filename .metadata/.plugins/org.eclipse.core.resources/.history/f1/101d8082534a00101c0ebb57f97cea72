@@ -1,9 +1,0 @@
-package pl.edu.pjwstk.s8267.GUI.Lab2;
-
-public class Equation {
-
-	public Equation(int[] t1) {
-		// TODO Auto-generated constructor stub
-	}
-
-}
