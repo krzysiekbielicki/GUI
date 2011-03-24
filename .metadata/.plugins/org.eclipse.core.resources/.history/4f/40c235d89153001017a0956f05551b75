@@ -1,0 +1,69 @@
+package pl.edu.pjwstk.s8267.GUI.Lab4;
+
+import java.util.Iterator;
+
+public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
+
+	private static final int PRIME_NUMBERS = 1;
+	private static final int ODD_NUMBERS = 2;
+	private static final int EVEN_NUMBERS = 3;
+
+	public MySimpleIterator(int i, int j, String primeNumbers) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Iterator<Integer> iterator() {
+		return this;
+	}
+
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Integer next() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void remove() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void setLimits(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setType(String oddNumbers) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		MySimpleIterator msi = new MySimpleIterator(10, 100, MySimpleIterator.PRIME_NUMBERS);
+
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+
+		msi.setType(MySimpleIterator.ODD_NUMBERS);
+		msi.setLimits(15, 30);
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+
+		msi.setType(MySimpleIterator.EVEN_NUMBERS);
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+	}
+}

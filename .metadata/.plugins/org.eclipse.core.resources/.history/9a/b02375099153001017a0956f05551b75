@@ -1,0 +1,15 @@
+package pl.edu.pjwstk.s8267.GUI.Lab4;
+
+import java.util.Iterator;
+
+public class MySimpleIterator implements Iterable<T>, Iterator<E> {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

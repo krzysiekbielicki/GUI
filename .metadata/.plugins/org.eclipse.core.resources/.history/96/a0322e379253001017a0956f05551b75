@@ -1,0 +1,82 @@
+package pl.edu.pjwstk.s8267.GUI.Lab4;
+
+import java.util.Iterator;
+
+public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
+
+	public static final int PRIME_NUMBERS = 1;
+	public static final int ODD_NUMBERS = 2;
+	public static final int EVEN_NUMBERS = 3;
+	private int from;
+	private int to;
+	private int type;
+	private int last;
+
+	public MySimpleIterator(int from, int to, int type) {
+		this.from = from;
+		this.to = to;
+		this.type = type;
+		last = from;
+	}
+
+	@Override
+	public Iterator<Integer> iterator() {
+		return this;
+	}
+
+	@Override
+	public boolean hasNext() {
+		return true;
+	}
+
+	@Override
+	public Integer next() {
+		switch(type) {
+		case PRIME_NUMBERS:
+			
+			break;
+		case ODD_NUMBERS:
+			break;
+		case EVEN_NUMBERS:
+			break;
+		}
+		return null;
+	}
+
+	@Override
+	public void remove() {
+		
+	}
+
+	private void setLimits(int from, int to) {
+		this.from = from;
+		this.to = to;
+		last = from;
+	}
+
+	private void setType(int type) {
+		this.type = type;
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		MySimpleIterator msi = new MySimpleIterator(10, 100, MySimpleIterator.PRIME_NUMBERS);
+
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+
+		msi.setType(MySimpleIterator.ODD_NUMBERS);
+		msi.setLimits(15, 30);
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+
+		msi.setType(MySimpleIterator.EVEN_NUMBERS);
+		for (int el : msi)
+			System.out.print(el + " ");
+		System.out.println();
+	}
+}
