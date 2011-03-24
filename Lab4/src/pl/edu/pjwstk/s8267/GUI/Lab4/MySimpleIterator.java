@@ -1,7 +1,6 @@
 package pl.edu.pjwstk.s8267.GUI.Lab4;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
 
@@ -11,10 +10,12 @@ public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
 	private int to;
 	private int type;
 	private int last;
+	private int from;
 
 	public MySimpleIterator(int from, int to, int type) {
 		this.to = to;
 		this.type = type;
+		this.from = from;
 		last = from-1;
 	}
 
@@ -36,18 +37,22 @@ public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
 			}
 			return false;
 		case ODD_NUMBERS:
-			if(last % 2 == 1 && last + 2 <= to) {
-				last += 2;
-				return true;
+			if(last % 2 == 1) {
+				if(last + 2 <= to) {
+					last += 2;
+					return true;
+				}
 			} else if(last + 1 <= to) {
 				last += 1;
 				return true;
 			}
 			return false;
 		case EVEN_NUMBERS:
-			if(last % 2 == 0 && last + 2 <= to) {
-				last += 2;
-				return true;
+			if(last % 2 == 0) {
+				if(last + 2 <= to) {
+					last += 2;
+					return true;
+				}
 			} else if(last + 1 <= to) {
 				last += 1;
 				return true;
@@ -68,12 +73,13 @@ public class MySimpleIterator implements Iterable<Integer>, Iterator<Integer> {
 	}
 
 	private void setLimits(int from, int to) {
+		this.from = from;
 		this.last = from-1;
 		this.to = to;
-		last = from;
 	}
 
 	private void setType(int type) {
+		this.last = from-1;
 		this.type = type;
 	}
 
