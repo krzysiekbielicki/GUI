@@ -6,7 +6,7 @@ public class JustificationTest {
 				new FormattedString("Alicja", 20), // na 20 miejscach
 				new FormattedInt(345, 20),
 				new FormattedString("w krainie", 20),
-				new FormattedInt(-7.5, 20, 5), // na 20 miejscach, 5 po
+				new FormattedDouble(-7.5, 20, 5), // na 20 miejscach, 5 po
 												// przecinku
 				new FormattedString("kota", 20)
 			};

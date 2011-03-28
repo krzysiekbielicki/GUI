@@ -1,0 +1,350 @@
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 5</title>
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1> Klasy <font color=red>wewnętrzne, lokalne, anonimowe</font>, do wyboru, do koloru...<br>
+       i... powtórkowo <font color=red>interfejsy</font></H1>
+  <p align=right><img src="./images/line.gif"> 
+
+
+  <ul>
+      <li> &nbsp; <B> Zadanie 1</B> <BR><br>
+
+       Wykorzystaj klasy zdefiniowane w ramach <i>Laboratorium&nbsp;4</i>&nbsp;tak, aby było możliwe 
+       sprawne wydrukowanie listy zakupów. Mile widziana klasa 
+       wewnętrzna lub anonimowa umożliwiająca wypisanie kwoty włącznie z nazwą waluty. 
+       Poniżej zamieszczono ocalałe fragmenty kodu, oraz wynik jego wykonania.<br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+  <b>ShoppingItem</B>[] items={ new ShoppingItem("pieczywo",4.3),
+                                new ShoppingItem("gazety",9.2),
+                                new ShoppingItem("warzywa",12.55),
+                                new ShoppingItem("mieso",23),
+                                new ShoppingItem("kosmetyki",121.50)
+                              };
+  
+  for(int i=0;i&lt;items.length;i++)
+    items[i].<b>show</B>(i+1);
+
+
+
+
+  printFooter(items);</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+  1. pieczywo      4.30 zl
+  2. gazety        9.20 zl
+  3. warzywa      12.55 zl
+  4. mieso        23.00 zl
+  5. kosmetyki   121.50 zl
+--------------------------  
+         RAZEM:  170.55 zl</PRE>
+      </td>
+</tr></tbody>
+</table>
+
+
+
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+      <li> &nbsp; <B> Zadanie 2 (recycling)</B> <BR><br>
+ 
+       Wykorzystaj zdefiniowane wcześniej klasy, zdefiniuj klasę <i>PozycjaBilingu</i> tak, aby możliwe było
+       wykonanie poniższego kodu testowego.<br><br>
+
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ PozycjaBilingu biling[]={
+                          new PozycjaBilingu("Arek",5,59,94),
+                          new PozycjaBilingu("Zosia",17,5,61),
+                          new PozycjaBilingu("Mat",12,0,180)
+                         };
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+	   
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_TIME);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_LENGTH);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_NAME);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);</pre>
+   </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+Arek   start(godz:min): 05:59  czas polaczenia (min:sek): 1:34
+Zosia  start(godz:min): 17:05  czas polaczenia (min:sek): 1:01
+Mat    start(godz:min): 12:00  czas polaczenia (min:sek): 3:00
+
+
+
+
+
+Arek   start(godz:min): 05:59  czas polaczenia (min:sek): 1:34
+Mat    start(godz:min): 12:00  czas polaczenia (min:sek): 3:00
+Zosia  start(godz:min): 17:05  czas polaczenia (min:sek): 1:01
+
+
+
+
+
+Zosia  start(godz:min): 17:05  czas polaczenia (min:sek): 1:01
+Arek   start(godz:min): 05:59  czas polaczenia (min:sek): 1:34
+Mat    start(godz:min): 12:00  czas polaczenia (min:sek): 3:00
+
+
+
+
+
+Arek   start(godz:min): 05:59  czas polaczenia (min:sek): 1:34
+Mat    start(godz:min): 12:00  czas polaczenia (min:sek): 3:00
+Zosia  start(godz:min): 17:05  czas polaczenia (min:sek): 1:01
+</PRE>
+      </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+      <li> &nbsp; <B> Zadanie 3 </B> <BR><br>
+
+Wykorzystaj zdefiniowane do tej pory klasy, tak aby można było wyświetlić zawartość bieżącego 
+(lub dowolnego innego katalogu) 
+w przedstawiony poniżej sposób. W konstrukcji programu wykorzystaj zdefiniowaną
+w pakiecie <i>java.io</i> klasę <i>File</i>. Program powinien wyświetlać wszystkie katalogi 
+oraz pliki tylko o wybranym wcześniej rozszerzeniu.<br>
+ Sprawdź, czy i w jakich sytuacjach niezbędne jest użycie metody <i>getAbsolutePath()</I> w kodzie
+źródłowym.<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ File dir=new File("."); // katalog bieżący
+
+ ... // ustalenie, jakie rozszerzenie plikow
+     // interesuje użytkownika
+		
+ String[] fnames=dir.list( ....);
+
+
+ for(int i=0;i &ltfnames.length;i++){
+   File tmpFile=new File(<b>dir.getAbsolutePath()</b>+"\\"+fnames[i]);
+   long size=<b>n.length()</b>; //metoda zwraca wielkość pliku
+   if (<b>tmpFile.isDirectory()</b>){ // metoda zwraca true, jeśli
+     ...                      // tmpFile przechowuje katalog
+   else
+     ...
+ }  </pre>
+      </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+ a100.zip              plik          105030 
+ FTP                 katalog       
+ lab1.zip              plik            2140   
+ Wyklad1.zip           plik          256302</pre>
+      </td></tr></tbody>
+</table>
+
+  
+        <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 4 (powtórka z rozrywki)</B> <BR><br>
+Zdefiniuj klasę <i>DaysToRemember</i> i uzupełnij kod testowy (zamiast _____ wstaw odpowiedni łańcuch) tak, aby możliwe było jego wykonanie w&nbsp;sposób przedstawiony poniżej.<br><br>
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="70%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+<pre>
+ DaysToRemember notForget=new DaysToRemember(Calendar.SUNDAY,3,2011);
+ System.out.println("Hipotetycznie wolne: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+	   
+
+
+
+
+ notForget.setDayWeek(Calendar.MONDAY);
+ System.out.println("\nGUI: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+ notForget.setDayWeek(Calendar.TUESDAY);
+ System.out.println("\nnot GUI: "\n);
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+	   
+ notForget.setDayWeek(Calendar.THURSDAY);
+ System.out.println("\nMały piatek: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+ 	   
+ notForget.setDayWeek(Calendar.FRIDAY);
+ System.out.println("\nPiatek: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);</pre>
+    </td>
+    <td valign="Top">
+<pre>
+
+  Hipotetycznie wolne: 
+
+	13.03.2011
+	20.03.2011
+	27.03.2011
+	03.04.2011
+
+
+
+  GUI: 
+
+	14.03.2011
+	21.03.2011
+	28.03.2011
+	04.04.2011
+
+
+
+  not GUI: 
+
+	08.03.2011
+	15.03.2011
+	22.03.2011
+	29.03.2011
+	05.04.2011
+
+
+
+  Mały piatek: 
+
+	10.03.2011
+	17.03.2011
+	24.03.2011
+	31.03.2011
+	07.04.2011
+
+
+
+  Piatek: 
+
+	11.03.2011
+	18.03.2011
+	25.03.2011
+	01.04.2011</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+</ul>
+</body>
+</html>

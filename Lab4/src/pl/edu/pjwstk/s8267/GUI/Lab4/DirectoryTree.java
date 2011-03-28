@@ -10,24 +10,24 @@ public class DirectoryTree {
 	}
 
 	private static void show(File file, String prefix) {
-		if(file.isFile()) {
-			System.out.println(file.getName());
-		} else {
+		if(file.isDirectory()) {
 			System.out.println(file.getName());
 			File[] files = file.listFiles();
 			String p;
 			for(int i = 0; i < files.length; i++) {
-				if(i + 1 < files.length)
+				if(i+1 < files.length && files[i+1].isDirectory())
 					p = prefix + "|   ";
 				else
 					p = prefix + "    ";
-				System.out.print(prefix+"+---");
-				show(files[i], p);
+				if(files[i].isDirectory()) {
+					System.out.print(prefix+"+---");
+					show(files[i], p);
+				}
 			}
 		}
 	}
 
 	public static void main(String args[]) {
-		DirectoryTree.show("/home/skyman/PJWSTK/GUI");
+		DirectoryTree.show("/home/PJWSTK/s8267/zet/projects/GUI/Lab4");
 	}
 }
