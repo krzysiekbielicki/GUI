@@ -1,0 +1,11 @@
+package pl.edu.pjwstk.s8267.GUI.Lab4;
+
+public class FormattedDouble implements Justification {
+
+	@Override
+	public String justify(int alignment) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
