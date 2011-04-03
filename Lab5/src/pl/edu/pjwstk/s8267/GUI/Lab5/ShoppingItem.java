@@ -1,18 +1,25 @@
 package pl.edu.pjwstk.s8267.GUI.Lab5;
 
 public class ShoppingItem {
-	public ShoppingItem(String string, double d) {
-		// TODO Auto-generated constructor stub
+	private String nazwa;
+	private double cena;
+
+	public ShoppingItem(String nazwa, double cena) {
+		this.nazwa = nazwa;
+		this.cena = cena;
 	}
 
-	private void show(int i) {
-		// TODO Auto-generated method stub
-		
+	public void show(int nr) {
+		System.out
+				.println(String.format("%3d. %20s %6.2f zł", nr, nazwa, cena));
 	}
 
-	private static void printFooter(ShoppingItem[] items) {
-		// TODO Auto-generated method stub
-		
+	public static void printFooter(ShoppingItem[] items) {
+		double total = 0;
+		for (ShoppingItem i : items)
+			total += i.cena;
+		System.out.println("------------------------------------");
+		System.out.println(String.format("%25s %.2f zł", "RAZEM:", total));
 	}
 
 	public static void main(String args[]) {
@@ -21,10 +28,8 @@ public class ShoppingItem {
 				new ShoppingItem("warzywa", 12.55),
 				new ShoppingItem("mieso", 23),
 				new ShoppingItem("kosmetyki", 121.50) };
-
 		for (int i = 0; i < items.length; i++)
 			items[i].show(i + 1);
-
 		printFooter(items);
 	}
 }
