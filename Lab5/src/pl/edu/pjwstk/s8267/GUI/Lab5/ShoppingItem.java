@@ -1,8 +1,8 @@
 package pl.edu.pjwstk.s8267.GUI.Lab5;
 
 public class ShoppingItem {
-	private String nazwa;
-	private double cena;
+	protected String nazwa;
+	protected double cena;
 
 	public ShoppingItem(String nazwa, double cena) {
 		this.nazwa = nazwa;

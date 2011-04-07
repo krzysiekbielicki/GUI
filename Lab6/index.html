@@ -1,0 +1,425 @@
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 5</title>
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1> Klasy <font color=red>wewnętrzne, lokalne, anonimowe</font>, do wyboru, do koloru...<br>
+       i... powtórkowo <font color=red>interfejsy</font></H1>
+  <p align=right><img src="./images/line.gif"> 
+
+
+  <ul>
+      <li> &nbsp; <B> Zadanie 1</B> <BR><br>
+
+       Wykorzystaj klasy zdefiniowane w ramach wczeniejszych zajęć tak, aby było możliwe 
+       sprawne wydrukowanie listy zakupów. Mile widziana klasa 
+       wewnętrzna lub anonimowa umożliwiająca wypisanie kwoty włącznie z nazwą waluty. 
+       Poniżej zamieszczono ocalałe fragmenty kodu, oraz wynik jego wykonania.<br><br>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+  <b>ShoppingItem</B>[] items={ ... };
+  
+  for(int i=0;i&ltitems.length;i++)
+    items[i].<b>show</B>(i+1);
+
+
+
+
+  printFooter(items);</pre>
+    </td>
+    <td valign="Top">
+	<pre>
+
+
+
+  1. pieczywo      4.30 zl
+  2. gazety        9.20 zl
+  3. warzywa      12.55 zl
+  4. mieso        23.00 zl
+  5. kosmetyki   121.50 zl
+--------------------------  
+         RAZEM:  170.55 zl</PRE>
+      </td>
+</tr></tbody>
+</table>
+
+
+
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+      <li> &nbsp; <B> Zadanie 2 (recycling)</B> <BR><br>
+ 
+       Wykorzystaj zdefiniowane wcześniej klasy, aby możliwe było
+       wydrukowanie listy "internacjonalnych" zakupów poczynionych w globalnej wiosce przez
+       Pana, który nie był do końca zdecydowany,  jaką walutą ma zamiar uregulować należność.
+       Poniżej zamieszczono ocalałe fragmenty kodu, oraz wynik jego wykonania.<br><br>
+
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ <b>ExchangeRate</b>[] exchangeTable={ 
+                 new ExchangeRate("USD", 3.1994),
+                 new ExchangeRate("CAD",2.6394),
+                 new ExchangeRate("EUR",4.1449),
+                 new ExchangeRate("CHF", 2.6755),
+                 new ExchangeRate("GBP", 6.0233),
+                 new ExchangeRate("NOK",0.5048),
+                 new ExchangeRate("SEK",04533)
+               }; 
+
+ ShoppingItem[] items={
+                   new ShoppingItem("pieczywo", 4.3),
+                   new ShoppingItem("czasopisma", 3, "USD"),
+                       ...
+                      };
+  
+ for(int i=0;i&ltitems.length;i++)
+   items[i].show(i+1);
+
+
+
+
+
+
+
+ for(int i=0;i&ltitems.length;i++)
+   items[i].show(i+1,"GBP",exchangeTable);
+
+
+
+
+
+
+ <b>printFooter</b>(items,"GBP",exchangeTable);
+
+
+ for(int i=0;i&ltitems.length;i++)
+   items[i].show(i+1,exchangeTable);
+
+
+
+
+
+
+ <b>printFooter</b>(items,exchangeTable);
+
+
+ for(int i=0;i&ltitems.length;i++)
+   items[i].show(i+1,"NOK",exchangeTable);
+
+
+
+
+
+
+ <b>printFooter</b>(items,"NOK",exchangeTable);</pre>
+   </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1. pieczywo      4.30 PLN
+  2. czasopisma    3.00 USD
+  3. pudding      12.50 GBP
+  4. mieso        23.00 PLN
+  5. kosmetyki    35.00 CHF
+  6. flaga USA     8.00 USD
+  7. flaga EU      8.00 EUR
+
+
+  1. pieczywo      4.30 PLN -->   0.71 GBP 
+  2. czasopisma    3.00 USD -->   1.59 GBP
+  3. pudding      12.50 GBP
+  4. mieso        23.00 PLN -->   3.82 GBP
+  5. kosmetyki    35.00 CHF -->  15.55 GBP
+  6. flaga USA     8.00 USD -->   4.25 GBP
+  7. flaga EU      8.00 EUR -->   5.51 GBP
+ --------------------------  
+         RAZEM:   43.93 GBP
+
+
+  1. pieczywo      4.30 PLN
+  2. czasopisma    3.00 USD -->   9.60 PLN
+  3. pudding      12.50 GBP -->  75.29 PLN
+  4. mieso        23.00 PLN
+  5. kosmetyki    35.00 CHF -->  93.64 PLN
+  6. flaga USA     8.00 USD -->  25.60 PLN
+  7. flaga EU      8.00 EUR -->  33.16 PLN
+ --------------------------  
+         RAZEM:  264.59 PLN
+
+
+  1. pieczywo      4.30 PLN -->   8.52 NOK
+  2. czasopisma    3.00 USD -->  19.01 NOK
+  3. pudding      12.50 GBP --> 149.15 NOK
+  4. mieso        23.00 PLN -->  45.56 NOK
+  5. kosmetyki    35.00 CHF --> 185.50 NOK
+  6. flaga USA     8.00 USD -->  50.70 NOK
+  7. flaga EU      8.00 EUR -->  65.69 NOK
+ --------------------------  
+         RAZEM:  524.13 NOK
+</PRE>
+      </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+
+
+
+      <li> &nbsp; <B> Zadanie 3 (recycling)</B> <BR><br>
+ 
+       Wykorzystaj zdefiniowane wcześniej klasy, zdefiniuj klasę <i>PozycjaBilingu</i> tak, aby możliwe było
+       wykonanie poniższego kodu testowego.<br><br>
+
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+ PozycjaBilingu biling[]={
+                          new PozycjaBilingu("Arek",5,9,94),
+                          new PozycjaBilingu("Zosia",17,5,61),
+                          new PozycjaBilingu("Mat",12,0,180)
+                         };
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+	   
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_TIME);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_LENGTH);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);
+
+
+
+
+  PozycjaBilingu.setSortKey(PozycjaBilingu.KEY_NAME);
+  Arrays.sort(biling);
+  for(PozycjaBilingu b: biling)
+    System.out.println(b);</pre>
+   </td>
+    <td valign="Top">
+	<pre>
+
+
+
+
+
+
+Arek   05:09  czas polaczenia: 1min. 34s.
+Zosia  17:05  czas polaczenia: 1min. 1s.
+Mat    12:00  czas polaczenia: 3min.
+
+
+
+
+
+Arek   05:09  czas polaczenia: 1min. 34s.
+Mat    12:00  czas polaczenia: 3min.
+Zosia  17:05  czas polaczenia: 1min. 1s.
+
+
+
+
+
+Zosia  17:05  czas polaczenia: 1min. 1s.
+Arek   05:09  czas polaczenia: 1min. 34s.
+Mat    12:00  czas polaczenia: 3min.
+
+
+
+
+
+Arek   05:09  czas polaczenia: 1min. 34s.
+Mat    12:00  czas polaczenia: 3min.
+Zosia  17:05  czas polaczenia: 1min. 1s.
+</PRE>
+      </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+
+
+      <li> &nbsp; <B> Zadanie 4 (powtórka z rozrywki)</B> <BR><br>
+Zdefiniuj klasę <i>DaysToRemember</i> i uzupełnij kod testowy (zamiast _____ wstaw odpowiedni łańcuch) tak, aby możliwe było jego wykonanie w&nbsp;sposób przedstawiony poniżej.<br><br>
+
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="70%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+<pre>
+ DaysToRemember notForget=new DaysToRemember(Calendar.SUNDAY,3,2011);
+ System.out.println("Hipotetycznie wolne: \n");
+ for(Calendar a: notForget)
+   System.out.printf("\t%1$td.%1$tm.%1$tY\n",a);
+	   
+
+
+
+
+ notForget.setDayWeek(Calendar.MONDAY);
+ System.out.println("\nGUI: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+ notForget.setDayWeek(Calendar.TUESDAY);
+ System.out.println("\nnot GUI: "\n);
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+	   
+ notForget.setDayWeek(Calendar.THURSDAY);
+ System.out.println("\nMały piatek: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);
+
+
+
+
+
+ 	   
+ notForget.setDayWeek(Calendar.FRIDAY);
+ System.out.println("\nPiatek: \n");
+ for(Calendar a: notForget)
+   System.out.printf("____________",a);</pre>
+    </td>
+    <td valign="Top">
+<pre>
+
+  Hipotetycznie wolne: 
+
+	06.03.2011
+	13.03.2011
+	20.03.2011
+	27.03.2011
+
+
+
+  GUI: 
+
+	07.03.2011
+	14.03.2011
+	21.03.2011
+	28.03.2011
+
+
+
+  not GUI: 
+
+	08.03.2011
+	15.03.2011
+	22.03.2011
+	29.03.2011
+
+
+
+
+  Mały piatek: 
+
+	10.03.2011
+	17.03.2011
+	24.03.2011
+	31.03.2011
+
+
+
+
+  Piatek: 
+
+	04.03.2011
+	11.03.2011
+	18.03.2011
+	25.03.2011</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+</ul>
+</body>
+</html>
