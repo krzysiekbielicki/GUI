@@ -1,0 +1,248 @@
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-2">
+  <title>GUI, laboratorium 7, 8</title>
+
+
+  <style>
+   <!--
+      BODY {margin-left: 0.5cm; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman Old Style, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; line-height: 170%
+           }
+      pre {  font-size: 95%;  line-height: 120% }
+      H1   {font-family: tahoma, arial, helvetica; font-size: 14pt; 
+            font-weight: bold; text-align: right
+           }
+	  
+      div.c   {margin-left: 35%; margin-right: 1cm; margin-top: 1cm;
+            font-family: Bookman, Times; font-size: 12pt; text-align: left;
+            font-height: 170%; width: 65%;  float=right}	   
+      LI {list-style: url(./images/point3.gif) square }
+    -->
+  </style>
+</head>
+
+<body bgcolor="#F0F0F0">
+  <H1>Snują się <font color=red>wątki</font> na cyfrowym kołowrotku</H1>
+  <p align=right><img src="./images/line.gif"> 
+  <ul>
+      <li> &nbsp; <B> Zadanie 1</B> <BR><br>
+         Napisz program symulujący aktywność kilkorga ludzi.
+         Każda z osób ma do wykonania kilka czynności, każde z nich
+         w pewnym losowo wyznaczonym tempie np.: szybko (do 5 sekund), 
+         wolno (10-20 sekund), bardzo wolno (20-30 sekund). <b>Osoby wykonują swoje zadania niezależnie w tym samym czasie</b>.
+         <br>
+         &nbsp &nbsp Poniżej przedstawiono przydatne fragmenty kodu i przykładowy wynik działania programu.<br><br>
+         
+<pre></pre>
+
+
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+class <b>Speed</b>{
+   .... hows[]={"fast","medium","slow","very slow"};
+   .... maxs[]={5000,10000,20000,30000};
+
+   public static int getSpeedInt(String speedString){
+     .... 
+   }
+}
+
+class <b>Task</b>{
+   ....
+}
+
+class <b>BusyPerson</b> .....{
+   ....
+}
+
+class  People{
+  public static void main(String[] args){
+    Task tasksA[]={<b>new Task("washing","fast")</b>,
+                new Task("reading","slow"),
+                new Task("shopping","medium")};
+    Task tasksM[]={new Task("sleeping zzzzzzzzzz","very slow"),
+                new Task("learning","slow"),
+                new Task("  :**   ","slow"),
+                new Task("passing an exam","slow") };
+    Task tasksJ[]={new Task("listening music","medium"),
+                new Task("doing nothing","slow"),
+                new Task("walking","medium")  };
+
+    BusyPerson friends[]={ <b>new BusyPerson("Alice",tasksA)</b>,
+                           new BusyPerson("Mark",tasksM),
+                           new BusyPerson("John",tasksJ)};
+
+    System.out.println("STARTING.....................");
+    for(BusyPerson f: friends)
+      <b>(new Thread(f)).start();</b>
+    System.out.println("DONE.........................");
+  }
+}</pre>
+    </td>
+</tr></tbody>
+</table>
+<br>
+ <table cellpadding="2" cellspacing="2" border="1" width="80%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+
+   STARTING.....................
+   DONE.........................
+   John is...    listening music 	 medium 	(7.05 sekund)
+   Alice is...   washing 	 fast 	(3.268 sekund)
+   Mark is...    sleeping zzzzzzzzzz 	 very slow 	(23.71 sekund)
+   Alice is...   reading 	 slow 	(15.516 sekund)
+   John is...    doing nothing 	 slow 	(13.692 sekund)
+   Alice is...   shopping 	 medium 	(8.371 sekund)
+   Mark is...    learning 	 slow 	(13.904 sekund)
+   John is...    walking 	 medium 	(5.172 sekund)
+   Mark is...    :**    	 slow 	(12.322 sekund)
+   Mark is...    passing an exam        very slow 	(27.1 sekund)</pre>
+    </td>
+</tr></tbody>
+</table>
+          <hr color="#DD0000" width="100%" size="2"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 2 </B> <BR><br>
+             Napisz program realizujący grę w zapałki. Na stole 
+leży 51 zapałek. W grze bierze udział dwóch graczy (komputer przeciwko komputerowi). Każdy z graczy
+może wziąć z kupki zapałek jedną, dwie lub trzy zapałki.  Wygrywa ten, który weźmie ostatnią zapałkę. 
+  <br>
+ &nbsp &nbsp Zrealizuj każdego uczestnika gry jako osobny wątek.  Zastosuj opóźnienia czasowe między kolejnymi ruchami wirtualnych graczy (liczba branych zapałek realizowana losowo), aby możliwe było
+prześledzenie poprawności rozgrywanej partii.
+  <br>
+ &nbsp &nbsp Poniżej przedstawiono przydatne fragmenty kodu i przykładowy fragment rozpoczęcia rozgrywki.<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="85%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+<font color=blue><b>class Shared { </font>   // współdzielone przez graczy dane
+<font color=blue>  private int ktory=0;</b>    </font>// którego z graczy jest teraz ruch
+                          // partię rozpoczyna gracz oznaczony numerem 0
+<font color=blue>  <b>private int ileZapalek;</b> </font>// ile jest aktualnie zapałek na stole
+<font color=blue>  <b>...
+}</font></b>
+
+class <b>Player</b> extends Thread{
+  ...
+}
+
+class <b>Matches</b> {
+ public static void main(String[] args){
+  <font color=blue><b>Shared t=new Shared(51);</b></FONT> //51 zapalek, 2 graczy
+  Player ps[]={ 
+               new Player("Alice-Computer",<font color=blue><b>t</B></FONT>),   
+               // automatyczny przydział numeru 0
+
+               new Player("Mark-Computer",<font color=blue><b>t</B></FONT>)   
+               // automatyczny przydział numeru 1
+              };
+  for(Player p: ps)
+    <b>p.start()</b>;
+  System.out.println("Główny watek czeka, az ktos wygra...");
+ }
+}</pre>
+    </td>
+</tr></tbody>
+</table>
+
+<br>
+ <table cellpadding="2" cellspacing="2" border="1" width="85%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>wynik działania programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>
+na stole jest 51 zapalek
+                          Alice-Computer bierze 1
+na stole jest 50 zapalek
+                          Mark-Computer bierze 2
+na stole jest 48 zapalek
+                          Alice-Computer bierze 2
+na stole jest 46 zapalek
+                          Mark-Computer bierze 1
+na stole jest 45 zapalek
+                          Alice-Computer bierze 2
+na stole jest 43 zapalek
+..................................................</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="5"><BR><br>
+
+      <li> &nbsp; <B> Zadanie 3 </B> <BR><br>
+	  Zmodyfikuj zaprojektowaną grę w zapałki, tak aby uczestnikiem gry mógł być także użytkownik mało <i>wirtualny</I> (czyli z krwi i kości) posługujący się klawiaturą, w celu podania rządanej liczby zapałek, które chce wziąć ze stołu. <br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="85%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>class Matches {
+ public static void main(String[] args){
+  Shared t=new Shared(51); //51 zapalek, wciąż dwóch graczy
+  Player tab[]={new <b>PlayerMan</b>("The Student I",t,PlayerMan.CONSOLE), //dane wprowadze z konsoli
+                new <b>PlayerMan</b>("The Student II",t,PlayerMan.INPUT_DIALOG)}; //dane wprowadzane "okienkiem"
+  //...
+  System.out.println("Główny watek czeka, az ktos wygra...");
+ }
+}</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="8"><BR><br>
+
+
+      <li> &nbsp; <B> Zadanie 4  </b><BR><br>
+
+	  Zmodyfikuj zaprojektowaną grę w zapałki, tak aby mogła grać dowolna liczba graczy rzeczywistych i wirtualnych. Zaproponuj strategię gry dla uczestników wirtualnych. <br> &nbsp Poniżej przedstawiono przykładowy kod testujący.<br><br>
+
+ <table cellpadding="2" cellspacing="2" border="1" width="85%" bgcolor="#FFD700" align="center">
+  <tbody>
+    <tr>
+      <td valign="Top" bgcolor="#FFAA00"></font><b>kod programu</b></td>
+    </tr>
+    <tr>
+    <td valign="Top">
+	<pre>class Matches {
+ public static void main(String[] args){
+  <font color=blue><b>Shared t=new Shared(51,4);</b> //51 zapałek, <b>tym razem 4</b> graczy</font>
+  Player tab[]={new Player("Alice",t),  // gracz-komputer
+                new PlayerMan("The Student I",t,PlayerMan.CONSOLE),
+                new Player("Mark",t),  //gracz-komputer
+                new PlayerMan("The Student II",t,PlayerMan.INPUT_DIALOG)};
+
+  // ...
+  System.out.println("Główny watek czeka, az ktos wygra...");
+ }
+}</pre>
+    </td>
+</tr></tbody>
+</table>
+        <hr color="#DD0000" width="100%" size="11"><BR><br>
+</ul>
+</body>
+</html>
