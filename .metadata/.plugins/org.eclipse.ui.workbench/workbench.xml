@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="13" version="2.0">
 <workbenchAdvisor/>
 <window height="718" maximized="true" width="1024" x="0" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -13,13 +13,13 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="152" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,14 +28,39 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="People.java" partName="People.java" path="/home/skyman/PJWSTK/GUI/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/People.java" title="People.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/People.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/People.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="839" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Speed.java" partName="Speed.java" path="/home/skyman/PJWSTK/GUI/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java" title="Speed.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="514" selectionTopPixel="9"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Task.java" partName="Task.java" path="/home/skyman/PJWSTK/GUI/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java" title="Task.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="331" selectionTopPixel="37"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BusyPerson.java" partName="BusyPerson.java" path="/home/skyman/PJWSTK/GUI/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java" title="BusyPerson.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="278" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="484" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.resourceField="93" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -298,7 +323,165 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/People.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/People.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java"/>
+</editors>
+<item historyLabel="People.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="65" y="2"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="448" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="394" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="456" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="451" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="460" y="0"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="238" y="0"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="134" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="112" y="6"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="131" y="1"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="180" y="5"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="138" y="6"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="163" y="1"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="212" y="5"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="180" y="5"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="759" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="57" y="0"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="839" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="180" y="5"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="57" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="335" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="315" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="324" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="317" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="220" y="6"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="514" y="3"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="272" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="334" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="474" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item historyLabel="BusyPerson.java" index="4">
+<position info="not_deleted" x="278" y="0"/>
+</item>
+<item historyLabel="Task.java" index="3">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item historyLabel="Speed.java" index="2">
+<position info="not_deleted" x="514" y="3"/>
+</item>
+<item historyLabel="People.java" index="1">
+<position info="not_deleted" x="839" y="0"/>
+</item>
+<item active="true" historyLabel="Task.java" index="3">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -322,6 +505,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BusyPerson.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java">
+<persistable path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/BusyPerson.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Task.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java">
+<persistable path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Task.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Speed.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java">
+<persistable path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/Z1/Speed.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="People.java" tooltip="Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/People.java">
+<persistable path="/Lab7-8/src/pl/edu/pjwstk/s8267/GUI/Lab7_8/People.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShoppingItem.java" tooltip="Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/ShoppingItem.java">
+<persistable path="/Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/ShoppingItem.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExchangeRate.java" tooltip="Lab6/src/pl/edu/pjwstk/s8267/GUI/Lab6/ExchangeRate.java">
+<persistable path="/Lab6/src/pl/edu/pjwstk/s8267/GUI/Lab6/ExchangeRate.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShoppingExchange.java" tooltip="Lab6/src/pl/edu/pjwstk/s8267/GUI/Lab6/ShoppingExchange.java">
+<persistable path="/Lab6/src/pl/edu/pjwstk/s8267/GUI/Lab6/ShoppingExchange.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MySimpleIterator.java" tooltip="Lab4/src/pl/edu/pjwstk/s8267/GUI/Lab4/MySimpleIterator.java">
 <persistable path="/Lab4/src/pl/edu/pjwstk/s8267/GUI/Lab4/MySimpleIterator.java"/>
 </file>
@@ -337,9 +541,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PozycjaBillingu.java" tooltip="Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/PozycjaBillingu.java">
 <persistable path="/Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/PozycjaBillingu.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShoppingItem.java" tooltip="Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/ShoppingItem.java">
-<persistable path="/Lab5/src/pl/edu/pjwstk/s8267/GUI/Lab5/ShoppingItem.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WielokatForemny.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/WielokatForemny.java">
 <persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/WielokatForemny.java"/>
 </file>
@@ -348,24 +549,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Karta23.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Karta23.java">
 <persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Karta23.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Karta.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Karta.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Karta.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Prostokat.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Prostokat.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Prostokat.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Figura.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Figura.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Figura.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RasowyPies.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/RasowyPies.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WielokatyForemny.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/WielokatyForemny.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/WielokatyForemny.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Trojkat.java" tooltip="Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Trojkat.java">
-<persistable path="/Lab3/src/pl/edu/pjwstk/s8267/GUI/Lab3/Trojkat.java"/>
 </file>
 </mruList>
 </workbench>

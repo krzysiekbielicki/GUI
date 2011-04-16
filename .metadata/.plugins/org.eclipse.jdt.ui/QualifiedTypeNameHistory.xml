@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -23,4 +22,10 @@
 <fullyQualifiedTypeName name="pl.edu.pjwstk.s8267.GUI.Lab4.FormattedInt"/>
 <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="pl.edu.pjwstk.s8267.GUI.Lab5.ShoppingItem"/>
+<fullyQualifiedTypeName name="pl.edu.pjwstk.s8267.GUI.Lab6.ShoppingItem"/>
+<fullyQualifiedTypeName name="pl.edu.pjwstk.s8267.GUI.Lab6.ExchangeRate"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>
