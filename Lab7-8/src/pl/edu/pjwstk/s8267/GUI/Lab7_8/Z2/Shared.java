@@ -14,8 +14,10 @@ public class Shared { // współdzielone przez graczy dane
 		return ktory == playerId;
 	}
 
-	public synchronized int drawMatches(int playerId, int matchesCount) {
+	public synchronized int drawMatches(int playerId, int matchesCount) throws Exception {
 		if (myTurn(playerId)) {
+			if(matchesCount < 1 || matchesCount > 3)
+				throw new Exception();
 			ileZapalek -= matchesCount;
 			ktory = (ktory + 1) % playerCount;
 		}

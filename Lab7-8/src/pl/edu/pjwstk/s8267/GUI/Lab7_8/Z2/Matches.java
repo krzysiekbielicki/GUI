@@ -5,7 +5,7 @@ public class Matches {
 
 	public static void main(String[] args) {
 		Shared t = new Shared(51); // 51 zapalek, 2 graczy
-		Player ps[] = { new Player("Alice-Computer", t),
+		BasePlayer ps[] = { new Player("Alice-Computer", t),
 				// automatyczny przydział numeru 0
 
 				new Player("Mark-Computer", t),
@@ -13,7 +13,7 @@ public class Matches {
 				new PlayerMan("The Student II",t,PlayerMan.INPUT_DIALOG)
 		// automatyczny przydział numeru 1
 		};
-		for (Player p : ps)
+		for (BasePlayer p : ps)
 			p.start();
 		System.out.println("Główny watek czeka, az ktos wygra...");
 	}
