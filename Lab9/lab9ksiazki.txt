@@ -1,0 +1,12 @@
+220 30    255   0   0     Rzecz o istocie informatyki
+200 20      0 255 128     O czym szumi¹ wierzby
+150 25     60 190 150     Monsignore Kichote
+170 35    255 255   0     Nowy umys³ cesarza
+ 90 20    255 128   0     Powiastki dla wnuczek
+110 25    188  46  88     Cmentarzysko bezimiennych statków
+125 20    255 255 128     S³ownik racjonalny
+110 20    128 128   0     Rtêæ
+180 35    128 128 192     Sentencje ³aciñskie
+150  8    128   0   0     Sk±d te b³êdy?
+130 15    255 250   0     Listy z Ameryki
+100 50    255 128 128     MAG

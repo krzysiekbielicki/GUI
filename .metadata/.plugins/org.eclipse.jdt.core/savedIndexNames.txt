@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/home/skyman/PJWSTK/GUI/.metadata/.plugins/org.eclipse.jdt.core
-3228707853.index
-363497591.index

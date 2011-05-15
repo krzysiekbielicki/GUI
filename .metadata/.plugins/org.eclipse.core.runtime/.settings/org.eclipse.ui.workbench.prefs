@@ -1,4 +1,0 @@
-#Wed Mar 02 00:26:59 CET 2011
-PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.epp.usagedata.gathering;org.eclipse.epp.usagedata.recording;org.eclipse.equinox.p2.ui.sdk.scheduler;org.eclipse.mylyn.tasks.ui;org.eclipse.mylyn.team.ui;org.eclipse.update.scheduler;
-eclipse.preferences.version=1
-ENABLED_DECORATORS=org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator\:true,org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:false,org.eclipse.jdt.ui.buildpath.decorator\:true,org.eclipse.mylyn.context.ui.decorator.interest\:true,org.eclipse.mylyn.tasks.ui.decorators.task\:true,org.eclipse.mylyn.team.ui.changeset.decorator\:true,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.VirtualResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.eclipse.ui.ResourceFilterDecorator\:false,
